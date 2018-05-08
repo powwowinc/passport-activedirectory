@@ -121,7 +121,7 @@ Strategy.prototype.authenticate = function (req) {
 
   var auth = function auth(userProfile) {
     return _this._ad.authenticate(userProfile._json.dn, password, function (err, auth) {
-      if (err) return _this.error(err);
+      //if (err) return _this.error(err);
       if (!auth) return _this.fail('Authentication failed for ' + username);
       return verify(userProfile);
     });
